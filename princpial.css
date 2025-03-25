@@ -1,0 +1,252 @@
+body{
+    background: linear-gradient(to right, rgb(103, 213, 243), rgb(159, 129, 198));
+}
+footer p{
+    background: linear-gradient(to right, rgb(103, 213, 243), rgb(159, 129, 198));
+}
+
+/*BOTON OSCURO JAVASCRIPT*/
+
+button{ /*Darle forma al botón*/
+    border-radius: 20px 20px 20px 20px;
+}
+
+.dark-mode-to{
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode nav {
+    background-color: #333;
+}
+
+.dark-mode nav a{
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .dropbtn{
+    background-color: #444;
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .dropdown-content{
+    background-color: #444;
+}
+
+.dark-mode header {
+    background-color: #444;
+}
+
+.dark-mode .header-content{
+    background-color: #444;
+}
+
+.dark-mode main{
+    background-color: #444;
+}
+
+.dark-mode .info{
+    background-color: #444;
+}
+
+.dark-mode .content-box{
+    background-color: #444;
+}
+
+.dark-mode h1{
+    background-color: #444;
+}
+
+.dark-mode p{
+    background-color: #444;
+}
+
+
+
+/*Scroll JAVASCRIPT*/
+.content-box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.content-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/*Empezamos con la NAV*/
+:root {
+    --nav-background-color: #72d4f0; /*Creamos una variable de color para que sean la misma*/
+}
+nav {
+    display: flex; /*Para que el nav no se mueva*/
+    justify-content: center; /*Para que los <a> estén centrados*/
+    z-index: 1000;  /*Un valor alto para que quede por encima */
+    position: relative; /* Asegura que z-index funcione */
+    border-radius: 20px 20px 20px 20px; /*Doblar los bordes*/
+    background-color: var(--nav-background-color); /*Asignación del color de la variable*/
+    padding: 5px; /*Como de grande va a ser el contenedor en sí*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombreado*/
+}
+
+nav a{
+    background-color: var(--nav-background-color);
+    padding: 10px 50px; /*Separación de <a>*/
+    transition: background-color 0.3s ease; /* Animación para cuando pongamos el ratón encima */
+    border-radius: 20px 20px 20px 20px; /*Con esto elimino el marco de fondo que se veía cuadrado aún dándole la misma textura cuando está el ratón encima y cuando no*/
+}
+
+nav a:hover{
+    background-color: rgba(25, 135, 237, 0.8); /* Opcional: mejorar visibilidad con fondo semitransparente */
+    border-radius: 20px 20px 20px 20px; /* Redondear la imagen */
+    box-shadow: 0 0px 20px rgba(25, 135, 237, 0.8); /*Sombreado*/
+}
+
+
+
+
+/*Lista desplegable del NAV*/
+/* Contenedor del menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo del botón que activa el menú */
+.dropbtn {
+    background: #72d4f0; /*Fondo del boton "redes sociales" */
+    border: none; /*Le quitamos el borde al boton para que no se vea feo*/
+    cursor: pointer; /*Le cambiamos el estilo del ratón para que se note que es una lista*/
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+}
+
+/*Para darle el mismo efecto "flotar" que a los "NAV A:HOVER" */
+.dropbtn:hover{
+    background-color: rgba(25, 135, 237, 0.8); /* Opcional: mejorar visibilidad con fondo semitransparente */
+    border-radius: 20px 20px 20px 20px; /* Redondear la imagen */
+    box-shadow: 0 0px 20px rgba(25, 135, 237, 0.8); /*Sombreado*/
+}
+
+/* Estilos del contenido del dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--nav-background-color); /*Para quitar el fondo cuadrado que se ve al desplegar la lista*/
+    transform: translateX(10%);/*Para dejar centrado el div que sale al desplegar el buttom*/
+    border-radius: 20px;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /*Para que la lista se vea y no se la coma otra etiqueta*/
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content a {
+    display: flex;
+    padding: 10px;
+    color: black;
+    margin-top: 5px; /*Paa separar los botones entre sí*/
+}
+
+/* Mostrar el menú cuando la clase "show" está presente */
+.show {
+    display: block;
+}
+
+
+
+
+
+
+/*Empezamos con el cuerpo del documento*/
+header {
+    display: flex;
+    border-radius: 20px 20px 20px 20px;
+    justify-content: center; /* Centrar contenido */
+    align-items: center; /* Centra verticalmente */
+    background-color: var(--main-background-color); /*Fondo contenedor exterior*/
+    padding: 20px; /*Espacio interno para la foto y descripción*/
+    width: auto; /* Que ocupe todo el ancho */
+    margin-top: 20px; /*Para que se pegue arriba el header*/
+    left: 10px; /* Para que se eche un poco a la derecha*/
+    
+}
+
+.header-content {
+    background-color: var(--main-background-color); /*Fondo contenedor interior*/
+    display: flex; /*"activamos" esto para poder mover la imagen como quedamos dentro del contenedor*/
+    align-items: center; /*Que quede centrada la descripción*/
+    gap: 20px; /* Espacio entre la imagen y la descripción */
+}
+
+.header-content img {
+    width: 250px; /* Ajusta el tamaño de la imagen */
+    height: 200px;
+    border-radius: 20px 20px 20px 20px; /* Redondear la imagen */
+    box-shadow: 0 0px 20px rgb(243, 187, 187)
+}
+
+.description {
+    background-color: var(--main-background-color); /*Fondo de la descripción "hola soy..." */
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+
+
+/*Ahora empezamos la MAIN->SECTION */
+:root {
+    --main-background-color: rgb(248, 224, 224); /*Creamos una variable de color para que sean la misma*/
+}
+
+main{ /*La parte exterior de MAIN por fuera de los divs*/
+    background-color: rgb(159, 215, 255);
+    display: flex;
+    border-radius: 20px 20px 20px 20px;
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px; /*Espacio interno para la foto y descripción*/
+    width: auto; /* Que ocupe todo el ancho */
+    margin-top: 20px; /*Para que se pegue arriba el header*/
+    left: 10px; /* Para que se eche un poco a la derecha*/
+    box-shadow: 0 0px 20px rgb(159, 215, 255); /*Sombreado*/
+    
+}
+
+.info{
+    display: flex;
+    flex-direction: row; /*Apila los divs horizontalmente*/
+    background-color: rgb(159, 215, 255); /*Ponemos el mismo color que en Main*/
+    border-radius: 20px 20px 20px 20px;
+    gap: 20px; /*Separa los divs dentro del main*/
+    
+}
+.content-box { /*Div*/
+    background-color: var(--main-background-color);
+    display: inline-block;
+    padding: 20px; /*Espacio del contenido con respecto al contenedor principal MAIN*/
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgb(243, 187, 187); /*Sombrear los 2 primeros son para emparejar los 4 bordes y el 3 numero es para el grosos del difuminado*/
+}
+
+h1{ /* estudios*/
+    background-color: var(--main-background-color);
+    color: rgb(0, 0, 0);
+}
+
+p{ /*Actualmente...*/
+    background-color: var(--main-background-color);
+    color: rgb(0, 0, 0);
+}
+
+.content-box img{
+
+    border-radius: 20px 20px 20px 20px; /* Redondear la imagen */
+    max-width: 100%; /*Para que la imagen ocupe el máximo en el contenedor*/
+}

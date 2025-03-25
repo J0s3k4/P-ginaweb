@@ -1,0 +1,112 @@
+body{
+    background-image: url(images/fondo.jpg);
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla recortando si es necesario */
+    background-attachment: fixed; /* Fija la imagen para efecto "parallax" */
+}
+
+nav{
+    display: flex;
+    justify-content: center; /*Centrar horizontalmente*/
+    align-items: center; /*Centrar el contenido, en este caso el h1*/
+    background-image: url(images/informática.webp);
+    height: 200px;
+    border-radius: 20px 20px 20px 20px; /*Para redondear los bordes*/
+    justify-content: space-evenly; /*Para separar el h1 del botón*/
+}
+
+button{
+    background-color: rgb(168, 245, 245);
+    border-radius: 20px 20px 20px 20px;
+    height:40px; /*Alto*/
+    width: 70px; /*Ancho*/
+}
+h1{
+    color: azure; /*Color de las letras*/
+    font-size: 60;/*Tamano de las letras*/
+    align-items: center; /*Centrar las letras del <nav>*/
+}
+
+
+/*Header*/
+header {
+    display: flex;
+    border-radius: 20px 20px 20px 20px;
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color: rgb(175, 175, 175); /*Fondo contenedor exterior*/
+    padding: 20px; /*Espacio interno para la foto y descripción*/
+    width: auto; /* Que ocupe todo el ancho */
+    margin-top: 20px; /*Para que se pegue arriba el header*/
+    
+}
+
+.header-content {
+    background-color: rgb(175, 175, 175); /*Fondo contenedor interior*/
+    display: flex; /*"activamos" esto para poder mover la imagen como quedamos dentro del contenedor*/
+    align-items: center; /*Que quede centrada la descripción*/
+    gap: 20px; /* Espacio entre la imagen y la descripción */
+}
+
+.header-content img {
+    display: flex;
+    max-width: 150px;/*Alto*/
+    height: 150px; /*ancho*/ /*Lo podemos en auto para que coja la anchira del content-box*/
+    border-radius: 20px 20px 20px 20px;
+}
+
+.description {
+    background-color: rgb(175, 175, 175); /*Fondo de la descripción "hola soy..." */
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+
+
+
+/*General fuente para los divs*/
+h2{
+    color: rgb(0, 0, 0);
+}
+p{
+    color: rgb(0, 0, 0);
+}
+
+/*GOD DIV*/
+.container{
+    display: flex; /*Activamos para dar flexibilidad en el diseño*/
+    justify-content: space-evenly; /*Distribuye elementos con espacio entre ellos*/
+    align-items: center; /*Para centrarlos verticalmente*/
+    height: auto; /*Para que ocupen toda la altura de la página*/
+    background-color: none;
+    margin-top: 20px;
+}
+
+/* los divs content box*/
+.content-box, .content-box1{
+    width: 45%; /*Para que no colapsen los divs y esten separados*/
+    display: flex; /*Permitir mejor edición*/
+    justify-content: center; /*Centrar horizontalmente*/
+    background-color: rgb(175, 175, 175);
+    opacity: 65%; /*para que el contenedor principal se transparente*/
+    border-radius: 20px 20px 20px 20px;/*redondear un poco el contenedor*/
+    box-shadow: 0 0px 10px rgb(175, 175, 175); /*Darle fondo*/
+    /*margin-top: 0px; Separación con el contenedor de arriba (nav)*/
+}
+
+main, .content-box1 main{
+    display: flex;/*Activamos movilidades dentro del contenedor*/
+    width: 80%; /*Juega con el ancho de los dos contenedores separados*/
+    height: auto; /*Altura*/
+    align-items: flex-start;
+    flex-direction: column; /*Para que se apilen de arriba a abajo*/
+    align-items: end; /*Para centrar los elementos*/
+    align-items: center; /*Para centrar el contenido (h2, p img)*/
+}
+.content-box img, .content-box1 img{
+    display: flex;
+    max-width: 150px;/*Alto*/
+    height: 150px; /*ancho*/ /*Lo podemos en auto para que coja la anchira del content-box*/
+    border-radius: 20px 20px 20px 20px;
+    /* align-items: center;*/
+    /*margin-left: 400px; para mover la foto por el div separandolo de la izquierda*/
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/jsk.jpg" type="image/x-icon">
+    <link href="princpial.css" rel="stylesheet">
+    <title>Joseca</title>
+</head>
+<body>
+    <!--Vamos a anclar la barra de navegación y ponerla arriba-->
+    <nav>
+        <a href="Yo.html">Sobre mí</a>
+        
+        <a href="profile">Proyectos</a>
+        
+        <!--<a href="social">Redes sociales</a>-->
+        
+
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">Donde encontrarme ▼</button>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="https://www.instagram.com/jxs3k4/">Instagram</a>
+            </div>
+        </div>
+        
+        <!--Botón para ponerle un modo oscuro(configurar css y js)-->
+        <button id="dark-mode-toggle">🌙 Modo Oscuro</button>
+        <script src="boton.js"></script>
+    </nav>
+    <!--Vamos a diseñar el inicio de la página-->
+    <header>
+        <div class="header-content">
+            <img src="images/joseca.jpg" alt="Yo">
+            <h1 class="description">Hola soy José Carlos, un aspirante al desarrollo web.</br>A continuación contaré un poco acerca de mí.</h1>
+        </div>
+    </header>
+    
+    <!--Contenido de la página-->
+    <!--Main-->
+    <main>
+        <section class="info">
+            <!--Div1-->
+            <div class="content-box">
+                <h1>Mis estudios:</h1>
+                <p>Actualmente soy un aprendiz de desarrollo web, tanto por títulos oficiales como por autodidacta.</p>
+                <img src="images/portátil.jpg">
+            </div>
+            
+            <!--Div 2-->
+            <div class="content-box">
+                <h1>Meta:</h1>
+                <p>Llegar a ser un líder en el que confiar y ayudar a las generaciones futuras</p>
+                <img src="images/espectadores.jpg">
+            </div>
+
+            <div class="content-box">
+                <h1>Creación de contenido:</h1>
+                <p>No he tenido redes sociales dedicadas a subir contenido pero si he participado activamente en redes de otras personas ayudando a crear dicho contenido. </p>
+                <img src="images/ordenador-gafas.jpg">
+            </div>
+        </section>
+    </main>
+
+
+    </main>
+    <!--Pie de la página-->
+    <footer>
+        <p>Joseca dev</p>
+    </footer>
+</body>
+</html>
